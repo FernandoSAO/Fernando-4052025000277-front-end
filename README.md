@@ -8,5 +8,5 @@ No html são apresentadas 4 tabelas?
   - tabela de busca de faturas com a possibilidade de procurar todas as faturas de uma empresa ou fatura específica e possibilidade de excluir faturas
   - tabela de busca de empresas com a  busca por CNPJ e possibilidade de excluir empresas
 
-Faturas apenas podem ser adicionadas se a empresa de CNPJ correspondente existir
-Empresas só podem ser excluidas se não tiverem faturas registradas no sistema, necessita a exclusão dessas faturas primeiro
+Faturas apenas podem ser adicionadas se a empresa de CNPJ correspondente existir.
+Empresas só podem ser excluidas se não tiverem faturas registradas no sistema, necessita a exclusão dessas faturas primeiro.
