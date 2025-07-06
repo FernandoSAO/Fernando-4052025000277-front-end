@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Projeto</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="title">
+            <h1>Faturas e Pagamentos</h1>
+        </div>
+        <div class = "banner">
+            <img src = "./img/invoice image.jpg" alt = "y">
+        </div>
+    </header>
+
+    <!-- botões de alternar entre fatura e registro de empresas-->
+
+    <div class="switch-buttons-background">
+        <button id="showInvoices" class="switch-button active">Inserir Faturas</button>
+        <button id="showCompanies" class="switch-button">Inserir Empresas</button>
+        <button id="searchInvoices" class="switch-button">Procurar Fatura</button>
+        <button id="searchCompanies" class="switch-button">Procurar Empresa</button>
+    </div>    
+
+    <!-- registro de faturas -->
+
+    <section id="invoiceSection" class="invoice-management">
+
+        <!-- adicionar faturas-->
+
+        <section class="newItem">
+            <input type="text" id="newInvoice" placeholder="Código:" required>
+            <input type="text" id="newInvoiceCNPJ" placeholder="CNPJ:" required>
+            <input type="text" id="newValue" placeholder="Valor [R$]:" inputmode="numeric" required>
+            <input type="date" id="newPaymentDate" placeholder="Data Pagamento:" required>
+            <button onclick="newInvoiceItem()" class="addBtn">Adicionar</button>
+        </section>
+
+        <!-- tabela com items -->
+
+        <section class = "items">
+            <table id = "InvoicesTable">
+                <tr>
+                    <th>Código</th>
+                    <th>CNPJ</th>
+                    <th>Valor [R$]</th>
+                    <th>Data Pagamento</th>
+                    <th>Remover <img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <!-- registro de empresas -->
+
+    </section>
+
+        <section id="companySection" class="companies-management" style="display: none;">
+
+        <!-- adicionar empresas-->
+
+        <section class="newItem">
+            <input type="text" id="newCompanyCNPJ" placeholder="CNPJ:" required>
+            <input type="text" id="newCompanyName" placeholder="Nome da Empresa:" required>
+
+            <button onclick="newCompanyItem()" class="addBtn">Adicionar</button>
+        </section>
+
+        <!-- tabela com empresas -->
+
+        <section class = "items">
+            <table id = "CompaniesTable">
+                <tr>
+                    <th>CNPJ</th>
+                    <th>Nome da Empresa</th>
+                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <!-- procura de fatura -->
+
+    <section id="invoiceSearchSection" class="invoice-management">
+
+        <!-- procurar fatura-->
+
+        <section class="newItem">
+            <input type="text" id="SearchInvoiceNumber" placeholder="Código(vazio para procurar todos da empresa):" required>
+            <input type="text" id="SearchInvoiceCNPJ" placeholder="CNPJ:" required>
+            <button onclick="searchInvoiceItem()" class="addBtn">Procurar</button>
+        </section>
+
+        <!-- tabela com items -->
+
+        <section class = "items">
+            <table id = "InvoicesSearchTable">
+                <tr>
+                    <th>Código</th>
+                    <th>CNPJ</th>
+                    <th>Valor [R$]</th>
+                    <th>Data Pagamento</th>
+                    <th>Remover <img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <!-- procura de empresa -->
+
+    <section id="companySearchSection" class="invoice-management">
+
+        <!-- procurar empresas-->
+
+        <section class="newItem">
+            <input type="text" id="SearchCompanyCNPJ" placeholder="CNPJ:" required>
+            <button onclick="searchCompanyItem()" class="addBtn">Procurar</button>
+        </section>
+
+        <!-- tabela com items -->
+
+        <section class = "items">
+            <table id = "CompaniesSearchTable">
+                <tr>
+                    <th>CNPJ</th>
+                    <th>Nome da Empresa</th>
+                    <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
